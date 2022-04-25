@@ -9,6 +9,7 @@
     </parent>
     <artifactId>podnovus-webapp</artifactId>
     <name>podnovus-webapp</name>
+    <packaging>pom</packaging>
 
     <build>
         <plugins>
