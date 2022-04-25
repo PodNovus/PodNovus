@@ -37,26 +37,36 @@
                 <version>1.11.3</version>
                 <executions>
                     <execution>
-                        <id>install node and npm</id>
+                        <id>install-node</id>
                         <goals>
                             <goal>install-node-and-npm</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>npm install</id>
+                        <id>install-npm-dependencies</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
                         <phase>generate-resources</phase>
                     </execution>
                     <execution>
-                        <id>npm run build</id>
+                        <id>build-react-app</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
                             <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>test-react-app</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>test</phase>
+                        <configuration>
+                            <arguments>run test -- --watchAll=false</arguments>
                         </configuration>
                     </execution>
                 </executions>
